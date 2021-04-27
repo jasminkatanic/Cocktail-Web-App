@@ -1,0 +1,376 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Poppins:wght@100;200;300;400&display=swap');
+
+
+.home{
+  left: 20%;
+  position: absolute;  
+  width: 80%;
+  height: 100%;
+  background-color: $light-black-color;
+  overflow-y: scroll;
+
+  h2{
+    color: $white-color;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+    &-header{
+      width: 90%;
+      height: auto;      
+      margin: 5% auto;
+
+        &-main{
+          font-family: 'New Tegomin', serif;
+          font-size: 3rem;
+          color: $white-color;
+          text-transform: capitalize;
+        }
+
+        &-sub{
+          font-family: 'Poppins', sans-serif;
+          font-size: 1.5rem;
+          color: $white-color;
+        }
+    }
+
+    &-dl{
+      width: 90%;
+      height: 10%;      
+      margin: 3% auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;     
+
+      &-alphabet{
+        display: flex;
+        width: 100%;
+        height: 100%;               
+        justify-content: center;
+        flex: 1 0 10%;
+        
+
+        &-content{
+          width: 90%;          
+          display: flex;
+          align-self: center;
+          height: 50%;          
+          border-radius: 8px;   
+          cursor: pointer; 
+          color: $white-color;     
+                    
+          
+          &-letter{
+            margin: auto;
+            font-size: 1.6rem;            
+            font-family: 'Poppins', sans-serif;           
+           
+          }
+
+          &:hover{
+            background-color: $lime-green-color; 
+            color: $light-black-color;
+          }
+         
+        }
+
+
+      }
+    }
+
+    &-search{
+      width: 90%;
+      height: 10%;      
+      margin: 3% auto;
+      display: flex;
+      flex-direction: row;
+
+      &-btn{
+        display: flex;
+        width: 15%;
+        height: 100%;               
+        justify-content: center;
+
+        &-content{
+          display: flex;
+          align-self: center;
+          background-color: $lime-green-color;
+          padding: 5%;
+          font-size: 1.6rem;
+          border-radius: 8px;
+          font-family: 'Poppins', sans-serif;
+          
+          @include respond(maxNavBar){                                   
+            width: 100%;
+            margin: 5% auto;                 
+          }           
+        }
+
+        @include respond(maxNavBar){                                   
+          width: 100%;                        
+        } 
+      }
+
+      &-field{
+        display: flex;
+        width: 60%;
+        height: 100%;        
+        justify-content: center;
+
+        &-content{
+          display: flex;
+          align-self: center;
+          width: 95%;          
+          border-style: solid;
+          font-size: 1.6rem;
+          font-family: 'Poppins', sans-serif;
+          text-transform: capitalize;
+          height: 55%;
+          border-radius: 8px;
+
+          &:focus{
+            outline: none;
+          }
+
+          @include respond(maxNavBar){                                   
+            width: 100%;
+            height: 100%;                        
+          } 
+        }
+        @include respond(maxNavBar){                                   
+          width: 100%;
+          margin: 5% auto;                 
+        } 
+      }
+
+      &-type{
+        display: flex;
+        width: 25%;
+        height: 100%;        
+        justify-content: center;
+
+        &-content{
+          align-self: center;
+          font-size: 1.6rem;
+          font-family: 'Poppins', sans-serif;
+          width: 90%;
+          height: 60%;
+
+          @include respond(maxNavBar){                                   
+            width: 100%;    
+            height: 100%;            
+          } 
+        }
+
+        @include respond(maxNavBar){                                   
+          width: 100%;                
+        } 
+       
+      }
+
+      
+      @include respond(maxNavBar){                                   
+        flex-direction: column;                
+      } 
+    }
+
+  &-drinkList{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+      color: $white-color;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 200;
+      text-transform: capitalize;
+    }
+    
+
+    &-item{
+      display: flex;
+      width: 100%;
+      height: 30%;      
+      justify-content: center;
+      margin: 0% auto 5% auto;
+      
+      &-content{
+
+        display: flex;
+        flex-direction: row;
+        width: 95%;       
+        border: solid $lime-green-color 3px;
+        padding: 1%;
+
+        &-left{
+          width: 30%;
+          height: auto;    
+          
+          img{
+            height: 100%;
+            width: 100%;
+          }
+
+          @include respond(maxNavBar){                                   
+            width: 100%;                
+          } 
+        }
+  
+        &-right{        
+          width: 70%;
+          height: 100%;
+          
+  
+          &-content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+  
+  
+            &-title{          
+              display: flex;
+              align-self: flex-start;
+              justify-content: center;
+              font-family: 'New Tegomin', serif;          
+              font-size: 1.2rem;          
+              width: 100%;
+              color: $white-color;
+              h1{        
+                margin: 0;
+              }
+            }
+  
+            &-type{
+              display: flex;            
+              align-self: flex-start;
+              margin-left: 2%; 
+              color: $white-color;
+  
+              p{
+                margin-top: 0%;
+                hyphens: auto;
+                text-align: justify;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.3rem;
+              }
+              
+              @include respond(maxNavBar){                                   
+                margin-left: 0;                
+              }
+  
+            }
+  
+            &-instructions{
+              display: flex;            
+              align-self: flex-start;
+              margin-left: 2%;           
+              color: $white-color;
+  
+              p{
+                margin-top: 2%;
+                hyphens: auto;
+                text-align: justify;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.4rem;
+              }
+              @include respond(maxNavBar){                                   
+                margin-left: 0;                
+              }
+            }
+  
+            &-ingredient{
+              display: flex;            
+              align-self: flex-start;
+              margin-left: 2%; 
+              color: $white-color;
+  
+              p{
+                margin-top: 0%;
+                hyphens: auto;
+                text-align: justify;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.3rem;
+              }
+
+              @include respond(maxNavBar){                                   
+                margin-left: 0;                
+              }
+            }
+  
+            &-more{
+              display: flex;            
+              flex-direction: row;
+              margin-left: 2%; 
+              justify-content: flex-end;
+              align-content: flex-end;
+              
+  
+              &-buy{
+                display: flex;              
+                margin-top: 0%;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.5rem;
+                align-self: center;
+                margin-right: 3%;
+                padding: 1%;
+                background-color: $lime-green-color;
+                border-radius: 8px;
+                cursor: pointer;
+                
+              }
+  
+              &-favourite{              
+                display: flex;
+                font-size: 1.5rem;
+                align-self: center;
+                background-color: $lime-green-color;
+                padding: 1.5%;
+                border-radius: 8px;
+                cursor: pointer;
+               
+              }
+              @include respond(maxNavBar){                                   
+                margin-left: 0;                             
+              }
+            }
+  
+          }  
+          @include respond(maxNavBar){                                   
+            width: 100%;                
+          }     
+  
+        }
+        @include respond(maxNavBar){                                   
+          flex-direction: column;                 
+        }
+
+      }      
+    }
+  }
+
+  @include respond(maxNavBar){                                   
+    width: 100%;   
+    left: 0;             
+  }
+}
+
+
+.iconGrey{
+  color: $grey-color;
+}
+
+.iconRed{
+  color: $red-favourite-color;
+}
+
+.active{
+  background-color: $lime-green-color;
+  color: $light-black-color;
+}
+

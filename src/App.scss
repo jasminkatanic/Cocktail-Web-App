@@ -1,0 +1,13 @@
+@import "./sass/base";
+@import "./sass/search";
+@import "./sass/navBar";
+@import "./sass/home";
+@import "./sass/ingredients";
+@import "./sass/mobNav";
+
+.App {
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100vw;
+}

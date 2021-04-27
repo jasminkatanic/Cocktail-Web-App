@@ -1,0 +1,51 @@
+@import "./variables";
+@import "./mixins";
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+.navbar{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 20%;
+  height: 100vh;
+  background-color: $lime-green-color;
+  display: flex;  
+
+  &-elements{
+    width: 100%;    
+    display: flex;    
+    flex-direction: column;    
+    align-self: center; 
+    justify-content: center;    
+    height: 100%;
+
+    &-item{
+      display: flex;
+      text-decoration: none;
+      font-family: 'New Tegomin', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 5% auto 0% auto;
+      color: $light-black-color;
+      cursor: pointer;
+          
+      &:first-child{
+        margin: 0% auto 0% auto;
+      }
+      
+    }
+
+    &-itemMob{      
+      text-decoration: none;
+      font-family: 'New Tegomin', serif;
+      color: $light-black-color;
+      font-size: 2.5rem;      
+      cursor: pointer;     
+    }
+  }
+  @include respond(maxNavBar){                                   
+    display: none;
+    width: 0;
+    height: 0;                 
+  }
+}
